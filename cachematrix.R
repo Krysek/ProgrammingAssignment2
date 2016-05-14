@@ -113,6 +113,7 @@ testMyCode <- function() {
   message("")
   message("1st call cacheSolve().")
   print(cacheSolve(cMatrix))
+  
   message("")
   message("2nd call cacheSolve().")
   print(cacheSolve(cMatrix))
