@@ -59,17 +59,22 @@
 # https://github.com/rdpeng/ProgrammingAssignment2
 
 
+
 # This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   invMatrix <- NULL
+  
   set <- function(y) {
     x <<- y
     invMatrix <<- NULL
   }
+  
   get <- function() x
+  
   setInverseMatrix <- function(inverseMatrix) invMatrix <<- inverseMatrix
   getInverseMatrix <- function() invMatrix
+  
   list(set = set, get = get,
        setInverseMatrix = setInverseMatrix,
        getInverseMatrix = getInverseMatrix)
@@ -84,6 +89,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   invMatrix <- x$getInverseMatrix()
+  
   if(!is.null(invMatrix)) {
     message("getting cached inverser Matrix")
     return(invMatrix)
