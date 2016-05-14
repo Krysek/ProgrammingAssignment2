@@ -99,14 +99,18 @@ cacheSolve <- function(x, ...) {
 # This function tests my code in action.
 
 testMyCode <- function() {
-  message("Create matrix")
+  message("Create matrix:")
   textMatrix <- matrix(1:4, 2)
+  print(textMatrix)
   
-  message("Call of makeCacheMatrix().")
+  message("")
+  message("Call makeCacheMatrix().")
   cMatrix <- makeCacheMatrix(textMatrix)
   
-  message("1st call of cacheSolve().")
+  message("")
+  message("1st call cacheSolve().")
   print(cacheSolve(cMatrix))
-  message("2nd call of cacheSolve().")
+  message("")
+  message("2nd call cacheSolve().")
   print(cacheSolve(cMatrix))
 }
